@@ -8,7 +8,7 @@ import {
   Delete,
   Inject,
 } from '@nestjs/common';
-import { CoffeesDataSource, CoffeesService } from './coffees.service';
+import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 
@@ -16,7 +16,6 @@ import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 export class CoffeesController {
   constructor(
     @Inject(CoffeesService) private readonly coffeesService: CoffeesService,
-    private readonly coffeesDataSource: CoffeesDataSource,
   ) {}
 
   @Post()
